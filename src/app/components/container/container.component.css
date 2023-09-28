@@ -1,0 +1,26 @@
+#container{
+  height: calc(100vh - 160px); /* La hauteur container 100vh on enleve la somme de la hauteur du header et footer  ***/
+  display: flex;
+}
+#main{
+  background-color: violet;
+  flex: 3; /* Le main prend 3/4 du contenu***/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#aside{
+  background-color: green;
+  flex: 1; /* Le aside prend 1/4 du contenu***/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/** Responsive design **/
+@media screen and (max-width: 900px){
+  #container{
+    flex-direction: column; /** Pour supperposer #main et #aside pour les screen inferieur a 900px */
+
+  }
+  /** Pour que aside soit au dessus, il faut mettre reverse a la place de column */
+}
